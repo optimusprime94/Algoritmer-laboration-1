@@ -1,3 +1,5 @@
+
+
 #include "genlib.h"
 #include "twothreeTree.h"
 
@@ -47,7 +49,6 @@ void FreeTree(twotreeADT tree)
 
 	}
 	*/
-	FreeBlock(tree);
 }
 
 

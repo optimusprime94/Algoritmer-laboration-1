@@ -74,12 +74,16 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\Users\elvir\Source\Repos\algoritmer-laboration-1\C-algoritmer1\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\elvir\Source\Repos\algoritmer-laboration-1\C-algoritmer1\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
+    <IncludePath>C:\Users\elvir\Source\Repos\algoritmer-laboration-1\C-algoritmer1\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\elvir\Source\Repos\algoritmer-laboration-1\C-algoritmer1\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -150,9 +154,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="twothreeTree.c" />
+    <ClCompile Include="main.c" />
+    <ClCompile Include="twothreeTree.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="include\exception.h" />
+    <ClInclude Include="include\extgraph.h" />
+    <ClInclude Include="include\gcalloc.h" />
+    <ClInclude Include="include\genlib.h" />
+    <ClInclude Include="include\graphics.h" />
+    <ClInclude Include="include\random.h" />
+    <ClInclude Include="include\simpio.h" />
+    <ClInclude Include="include\strlib.h" />
     <ClInclude Include="twothreeTree.h" />
   </ItemGroup>
   <ItemGroup>
